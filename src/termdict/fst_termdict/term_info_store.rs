@@ -65,7 +65,7 @@ impl TermInfoBlockMeta {
         let num_bits = self.num_bits() as usize;
 
         let posting_start_addr = num_bits * inner_offset;
-        // the posting_start is the posting_start of the next term info.
+        // the posting_end is the posting_start of the next term info.
         let posting_end_addr = posting_start_addr + num_bits;
         let positions_start_addr = posting_start_addr + self.postings_offset_nbits as usize;
         // the position_end is the positions_start of the next term info.
